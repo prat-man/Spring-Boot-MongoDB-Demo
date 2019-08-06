@@ -1,0 +1,169 @@
+{
+	"info": {
+		"_postman_id": "1fecfaa6-7bc0-4c90-a77f-84fbb1f12f87",
+		"name": "DEMO-SPRING-BOOT-MONGO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Find Employee",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{url}}/find/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"find",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find All Employees",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{url}}/findall",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"findall"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Employee",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\" : 1,\n\t\"fname\" : \"Pratanu\",\n\t\"lname\" : \"Mandal\",\n\t\"department\" : {\n\t\t\"id\" : \"1\",\n\t\t\"name\" : \"Software\",\n\t\t\"location\" : \"Bangalore\"\n\t}\n}"
+				},
+				"url": {
+					"raw": "{{url}}/create",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Multiple Employees",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n\t{\n\t\t\"id\" : 1,\n\t\t\"fname\" : \"Pratanu\",\n\t\t\"lname\" : \"Mandal\",\n\t\t\"department\" : {\n\t\t\t\"id\" : \"1\",\n\t\t\t\"name\" : \"Software\",\n\t\t\t\"location\" : \"Bangalore\"\n\t\t}\n\t},\n\t{\n\t\t\"id\" : 2,\n\t\t\"fname\" : \"Sanjeev\",\n\t\t\"lname\" : \"Desai\",\n\t\t\"department\" : {\n\t\t\t\"id\" : \"2\",\n\t\t\t\"name\" : \"Hardware\",\n\t\t\t\"location\" : \"Bangalore\"\n\t\t}\n\t}\n]"
+				},
+				"url": {
+					"raw": "{{url}}/createall",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"createall"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Employee",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\" : 1,\n\t\"fname\" : \"Ratan\"\n}"
+				},
+				"url": {
+					"raw": "{{url}}/update",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Employee",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/delete/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"delete",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
